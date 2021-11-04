@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{% set temperature = temperature %}
 <script>
     let temp = ""
     function temperature() {
@@ -14,12 +13,15 @@
                 document.getElementById("Wear").innerHTML = "Wear comfortable clothes!";
             }
         }
+        temp = (temp-32)*5/9
+        document.getElementById("celsius").innerHTML = temp;
     }
+
 </script>
 <body style="background-color: lightseagreen">
     <div class="center-block" style="margin: 5% 0% 0% ; text-align:center; font-family: 'Trebuchet MS'; gilroy: serif; font-size: large">
         <div class="col-12">
-            <p>Input the temperature below</p>
+            <p>Input fahrenheit temperature below</p>
         </div>
         <div>
             <label for="answer" class="button"></label>
@@ -28,6 +30,12 @@
         </div>
         <div class="row justify-content-center margins-autos">
             <p id="Wear"></p>
+        </div>
+        <div>
+            Celsius:
+        </div>
+        <div class="row justify-content-center margins-autos">
+            <p id="celsius"></p>
         </div>
     </div>
 </body>

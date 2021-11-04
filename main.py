@@ -127,6 +127,14 @@ def grayProject():
 def wha_quiz():
     return render_template("Personal/wha_quiz.html")
 
+@app.route('/jeopardy/')
+def jeopardy():
+    return render_template("Personal/jeopardy.html")
+
+@app.route('/clothing/')
+def clothing():
+    return render_template("Personal/clothing.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port=5180)
 
